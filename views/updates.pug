@@ -1,0 +1,18 @@
+doctype html
+html
+  head
+    title= title
+  body
+    h1= title
+    a(href='/') Return to the homepage
+    form(method='POST', action='/update-cobj')
+      label(for='name') Name:
+      input(type='text', name='name', required)
+      br
+      label(for='power') Power:
+      input(type='text', name='power', required)
+      br
+      label(for='brand') Brand:
+      input(type='text', name='brand', required)
+      br
+      button(type='submit') Submit

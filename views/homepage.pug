@@ -1,0 +1,24 @@
+doctype html
+html
+  head
+    title= title
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    link(rel="stylesheet", href="/css/style.css")
+  body
+    h1= title
+    a(href='/update-cobj') Add/Update this table
+    if records.length
+      table(border='1')
+        thead
+          tr
+            th Name
+            th Power
+            th brand
+        tbody
+          each record in records
+            tr
+              td= record.properties.name
+              td= record.properties.power
+              td= record.properties.brand
+    else
+      p No records found.
